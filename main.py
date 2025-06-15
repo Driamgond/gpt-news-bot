@@ -3,7 +3,7 @@ import os
 import requests
 from datetime import datetime
 from openai import OpenAI
-from mailerlite import MailerLiteClient
+from mailerlite.client import MailerLiteClient
 
 # Load env
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
