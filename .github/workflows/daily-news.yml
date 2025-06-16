@@ -12,6 +12,7 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       MAILERLITE_API_KEY: ${{ secrets.MAILERLITE_API_KEY }}
       MAILERLITE_GROUP_ID: ${{ secrets.MAILERLITE_GROUP_ID }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -22,7 +23,7 @@ jobs:
           python-version: "3.10"
 
       - name: Install dependencies
-        run: pip install requests openai python-dotenv mailerlite
+        run: pip install -r requirements.txt
 
       - name: Run bot
         run: python main.py
